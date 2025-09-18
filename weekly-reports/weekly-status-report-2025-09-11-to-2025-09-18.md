@@ -2,8 +2,8 @@
 
 ## In Progress:
 
-_No Jira issues currently in progress_
-
+- [EPayment New Arch] Improve code coverage of hybrid payment flow - [SERV-9448](https://yassir.atlassian.net/browse/SERV-9448)
+- refactor(core): enhance refund handling for hybrid payments and improve validation (SERV-0000) [#819](https://github.com/YAtechnologies/fs-epayment/pull/819)
 ## Blocked:
 
 _No blocked items reported_
