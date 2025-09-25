@@ -1,0 +1,32 @@
+[
+  {
+    "createdAt": "2025-09-24T10:21:48Z",
+    "mergedAt": "2025-09-24T13:33:13Z",
+    "title": "test(core): add unit tests for AccessTokenManagerService and ClientCredentialsService",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/829"
+  },
+  {
+    "createdAt": "2025-09-23T12:51:38Z",
+    "mergedAt": "2025-09-23T13:48:14Z",
+    "title": "refactor(core): improve error handling in payment services and update test assertions",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/825"
+  },
+  {
+    "createdAt": "2025-09-22T06:24:23Z",
+    "mergedAt": "2025-09-22T10:08:01Z",
+    "title": "test(core): enhance PaymentController tests with additional methods and scenarios (SERV-9448)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/823"
+  },
+  {
+    "createdAt": "2025-09-21T07:10:00Z",
+    "mergedAt": "2025-09-21T10:40:30Z",
+    "title": "test(core): add unit tests for TransactionRepository methods (SERV-9448)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/821"
+  },
+  {
+    "createdAt": "2025-09-17T15:35:14Z",
+    "mergedAt": "2025-09-18T07:54:59Z",
+    "title": "refactor(core): enhance refund handling for hybrid payments and improve validation (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/819"
+  }
+]

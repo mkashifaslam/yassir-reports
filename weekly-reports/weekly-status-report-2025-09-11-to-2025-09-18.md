@@ -14,7 +14,7 @@ This week (Sep 1118) we merged 5 PRs and completed key EPayment New Arch ticket
 
 ## Blocked
 
-_No blocked items reported_
+- PSSP - SATIM payment method - [@shabrina](https://yassir-team.slack.com/team/U08D82KTDQV)
 
 ## Done
 
