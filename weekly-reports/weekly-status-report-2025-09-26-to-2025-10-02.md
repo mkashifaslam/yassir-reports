@@ -36,4 +36,9 @@ _No upcoming action items found in the current search criteria_
 **Report Period:** September 26, 2025 (Thursday) - October 2, 2025 (Wednesday)  
 **Generated on:** October 2, 2025  
 **Repository:** [fs-epayment](https://github.com/YAtechnologies/fs-epayment)  
+<<<<<<< HEAD
 **Jira Project:** [SERV - Financial Services](https://yassir.atlassian.net/browse/SERV)
+=======
+**Jira Project:** [SERV - Financial Services](https://yassir.atlassian.net/browse/SERV)
+
+> > > > > > > 71f21a2606e0d837aa16976ce0a8fcee19373ecc
