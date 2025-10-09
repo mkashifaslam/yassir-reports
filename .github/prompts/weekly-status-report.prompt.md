@@ -1,6 +1,6 @@
 ---
 mode: agent
-description: A prompt template for generating weekly status reports for developers.
+description: A prompt to generate weekly status reports for developers.
 ---
 
 # Weekly Status Report Generation Prompt
@@ -36,10 +36,29 @@ I am Muhammad Kashif, a Senior Full Stack Engineer at Yassir working on the Fina
 ### Step 1: Data Collection
 
 1. **Activate Jira tools** to access project data
-2. **Search for my Jira issues** assigned to me and updated since last Thursday:
+2. **Search for my Jira issues** assigned to me and updated since last Thursday till today:
    - JQL: `project = SERV AND assignee = currentUser() AND updated >= "YYYY-MM-DD"`
 3. **Fetch my merged GitHub PRs** since last Thursday:
    - Search query: `repo:YAtechnologies/fs-epayment author:kashif-yassir is:merged merged:>=YYYY-MM-DD`
+   - **GitHub CLI Setup and PR Fetching:**
+     - **Check current GitHub user:** `gh auth status`
+     - **Switch to correct user if needed:** `gh auth switch` (select `kashif-yassir` if not active)
+     - **Fetch merged PRs for the reporting period:**
+       ```bash
+       gh pr list --repo YAtechnologies/fs-epayment --state merged --author kashif-yassir --json title,url,mergedAt,createdAt --jq '[.[] | select(.mergedAt >= "[START_TIMESTAMP]" and .mergedAt <= "[END_TIMESTAMP]")]'
+       ```
+
+       - `START_TIMESTAMP` format: `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2025-09-25T00:00:00Z`)
+       - `END_TIMESTAMP` format: `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2025-10-02T23:59:59Z`)
+   - **Save PR data to JSON file:**
+     - Save the command output to `weekly-reports/prs_SHORT_DATE_FORMAT.json`
+     - `SHORT_DATE_FORMAT` is `<START_DD><END_DD><MM><YY>`; examples: `25021025` (25–02/10/2025), `19290925` (19–29/09/2025)
+     - JSON schema: array of objects with fields: `createdAt`, `mergedAt`, `title`, `url`
+   - **Fallback (if GitHub CLI command fails or is rate-limited):**
+     - Use existing local JSON files under `weekly-reports/` named `prs_` + `SHORT_DATE_FORMAT` + `.json`
+     - Selection rule: choose the file whose encoded range fully covers [StartDate, EndDate]; otherwise choose the closest overlapping range
+     - Filter rule: include only PRs where `mergedAt` lies within [StartDate, EndDate]
+     - Attach the selected file's contents to the agent context to proceed with report generation
 4. **Search for next action items** based on expanded criteria:
    - JQL: `project = SERV AND (status = "To Do" OR status = "Open" OR status = "Blocked") AND (assignee = currentUser() OR assignee is empty) AND (labels = "EPayment-New-Arch" OR summary ~ "[EPayment New Arch]") AND updated >= "YYYY-MM-DD"`
 
@@ -112,12 +131,17 @@ I am Muhammad Kashif, a Senior Full Stack Engineer at Yassir working on the Fina
 - Next Action Items should prioritize items with EPayment New Arch label or title prefix
 - Blocked items assigned to me go in "Blocked" section, blocked items unassigned/assigned to others go in "Next Action Items"
 - Next Action Items must have either label "EPayment-New-Arch" OR title containing "[EPayment New Arch]"
+- When using the local PR JSON fallback:
+  - Only include PRs whose `mergedAt` is within the reporting period
+  - Compute average and fastest merge times from `createdAt` to `mergedAt` for PRs in the period
+  - Sort PRs by `mergedAt` ascending for consistent output
 
 ## Tools Required
 
 - Jira/Atlassian integration tools
 - GitHub integration tools
 - File creation and directory management tools
+- Filesystem read capability for local JSON fallback (weekly-reports/prs\_\*.json)
 - Date calculation capabilities
 
 ## Example Usage
