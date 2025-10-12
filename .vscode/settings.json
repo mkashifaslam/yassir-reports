@@ -1,0 +1,6 @@
+{
+  "chat.promptFilesRecommendations": {
+    "report.sprint": true,
+    "report.weekly": true
+  }
+}
