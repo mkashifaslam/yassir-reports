@@ -1,0 +1,14 @@
+[
+  {
+    "createdAt": "2025-10-12T08:05:22Z",
+    "mergedAt": "2025-10-13T06:21:01Z",
+    "title": "feat(core): update payout method API requests and add new payout method fields",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/856"
+  },
+  {
+    "createdAt": "2025-10-08T05:57:38Z",
+    "mergedAt": "2025-10-09T06:31:30Z",
+    "title": "test(core): enhance payout module code coverage (SERV-9637)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/854"
+  }
+]
