@@ -17,7 +17,7 @@ This workspace organizes sprint and weekly status reports for the Payment System
 **Weekly Status Report Generation**  
 Use `.github/prompts/weekly-status-report.prompt.md` to generate weekly reports.
 
-- Inputs: Sprint/weekly period, developer name, PR JSON files, Jira ticket data.
+- Inputs: Sprint/weekly period, developer name, primary source of PRs JSON is GitHub CLI command and if it fails then local JSON files, Jira ticket data.
 - Output: Markdown report saved as `weekly_status_report_<START_MMDD><END_MMDD><YYYY>.md` in `weekly-reports/`.
 - PR metrics: Only count PRs merged within the period. Compute average and fastest merge times.
 - Jira queries: Filter by label `EPayment-New-Arch`, assignee `"Muhammad Kashif"`, and status.
@@ -29,8 +29,12 @@ Use `.github/prompts/sprint-status-report.prompt.md` to generate sprint reports 
 
 - **Report Naming**  
   Weekly reports use the pattern `weekly_status_report_<START_MMDD><END_MMDD><YYYY>.md`.
-- **PR Data Source**  
-  PRs are listed in JSON files (e.g., `prs_03170925.json`) with fields: `createdAt`, `mergedAt`, `title`, `url`.
+- **PR Data Source**
+  - Primary source is GitHub CLI command:
+  ```bash
+       GH_PAGER=cat gh pr list --repo YAtechnologies/fs-epayment --state merged --author kashif-yassir --json title,url,mergedAt,createdAt --jq '[.[] | select(.mergedAt >= "[START_TIMESTAMP]" and .mergedAt <= "[END_TIMESTAMP]")]'
+  ```
+  - Fallback to local JSON files in `weekly-reports/` named `prs_<SHORT_DATE_FORMAT>.json` if the CLI command fails or is rate-limited.
 - **Jira Integration**  
   All ticket references use the SERV project and filter by label/assignee as above.
 - **Markdown Structure**  
