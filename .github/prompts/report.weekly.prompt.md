@@ -51,8 +51,20 @@ I am Muhammad Kashif, a Senior Full Stack Engineer at Yassir working on the Fina
        GH_PAGER=cat gh pr list --repo YAtechnologies/fs-epayment --state merged --author kashif-yassir --json title,url,mergedAt,createdAt --jq '[.[] | select(.mergedAt >= "[START_TIMESTAMP]" and .mergedAt <= "[END_TIMESTAMP]")]'
        ```
 
-       - `START_TIMESTAMP` format: `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2025-09-25T00:00:00Z`)
-       - `END_TIMESTAMP` format: `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2025-10-02T23:59:59Z`)
+     - **If no merged PRs found, fetch open PRs for the reporting period:**
+
+       ```bash
+       GH_PAGER=cat gh pr list --repo YAtechnologies/fs-epayment --state open --author kashif-yassir --json title,url,mergedAt,createdAt --jq '[.[] | select(.createdAt >= "[START_TIMESTAMP]" and .createdAt <= "[END_TIMESTAMP]")]'
+       ```
+
+     - `START_TIMESTAMP` format: `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2025-09-25T00:00:00Z`)
+     - `END_TIMESTAMP` format: `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2025-10-02T23:59:59Z`)
+
+   - **Extract Jira ticket numbers from PR titles:**
+
+     - Parse PR titles to extract Jira ticket numbers (format: `SERV-XXXX` in parentheses at the end)
+     - Example: `"feat(core): test pr title (SERV-0000)"` → Extract `SERV-0000`
+     - Create clickable Jira links: `https://yassir.atlassian.net/browse/SERV-XXXX`
 
    - **Save PR data to JSON file:**
      - Save the command output to `weekly-reports/prs_SHORT_DATE_FORMAT.json`
@@ -71,11 +83,19 @@ I am Muhammad Kashif, a Senior Full Stack Engineer at Yassir working on the Fina
 
 #### Section Mapping by Jira Status:
 
-- **In Progress:** Issues with status "In Progress" or "Review"
+- **In Progress:** Issues with status "In Progress" or "Review" + Open PRs (if no merged PRs in period)
 - **Blocked:** Issues with status "Blocked" or "Need More Work" (assigned to me)
 - **Done:** Issues with status "Done" or "Cancelled"
 - **Testing:** Issues with status "Ready For Testing" or "In Test"
 - **Next Action Items:** Issues with status "Todo", "Open", or "Blocked" that are either assigned to me or unassigned, AND have label "EPayment-New-Arch" OR title contains "[EPayment New Arch]"
+
+#### Open PR Handling:
+
+- **When no merged PRs exist in the reporting period:**
+  - Fetch open PRs created within the period
+  - Extract Jira ticket numbers from PR titles using regex: `\(SERV-\d+\)`
+  - Add to "In Progress" section with format: `[PR Title] - [SERV-XXXX](Jira Link) - [PR Link](GitHub PR URL)`
+  - If no Jira ticket found in PR title, list PR without ticket reference
 
 #### Report Format:
 
@@ -85,6 +105,7 @@ I am Muhammad Kashif, a Senior Full Stack Engineer at Yassir working on the Fina
 ## In Progress:
 
 - [Jira Issue Title] - [SERV-XXXX](https://yassir.atlassian.net/browse/SERV-XXXX)
+- [PR Title] - [SERV-XXXX](https://yassir.atlassian.net/browse/SERV-XXXX) - [PR Link](https://github.com/YAtechnologies/fs-epayment/pull/XXX) _(if open PRs found)_
 
 ## Blocked:
 
@@ -136,6 +157,11 @@ I am Muhammad Kashif, a Senior Full Stack Engineer at Yassir working on the Fina
 - Next Action Items should prioritize items with EPayment New Arch label or title prefix
 - Blocked items assigned to me go in "Blocked" section, blocked items unassigned/assigned to others go in "Next Action Items"
 - Next Action Items must have either label "EPayment-New-Arch" OR title containing "[EPayment New Arch]"
+- **If no merged PRs found in the period:**
+  - Fetch and include open PRs in "In Progress" section
+  - Extract Jira ticket numbers from PR titles using pattern `(SERV-XXXX)`
+  - Format as: `[PR Title] - [SERV-XXXX](Jira Link) - [PR Link](GitHub URL)`
+  - If PR title has no Jira ticket, format as: `[PR Title] - [PR Link](GitHub URL)`
 - When using the local PR JSON fallback:
   - Only include PRs whose `mergedAt` is within the reporting period
   - Compute average and fastest merge times from `createdAt` to `mergedAt` for PRs in the period
