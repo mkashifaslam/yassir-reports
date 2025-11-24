@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description: A prompt template for generating sprint status reports for developers.
 ---
 
@@ -37,6 +37,12 @@ description: A prompt template for generating sprint status reports for develope
 • [PR Title 2 (JIRA-TICKET)](PR_URL_2)
 • [PR Title 3 (JIRA-TICKET)](PR_URL_3)
 
+### Work in Progress:
+
+• [PR Title 1 (JIRA-TICKET) - Status: Under Review](PR_URL_1)
+• [PR Title 2 (JIRA-TICKET) - Status: In Development](PR_URL_2)
+• [PR Title 3 (JIRA-TICKET) - Status: Pending Approval](PR_URL_3)
+
 ---
 
 ## How to Use This Template:
@@ -55,7 +61,8 @@ description: A prompt template for generating sprint status reports for develope
 1. **Sprint Summary**: Write 2-3 sentences about overall sprint work
 2. **Sprint Deliverables**: List major tasks completed (bullet points)
 3. **Jira Stories**: Extract JIRA tickets from PR titles
-4. **Pull Requests**: Copy PR titles and URLs
+4. **Pull Requests**: Copy PR titles and URLs for merged PRs
+5. **Work in Progress**: List PRs created during sprint but not yet merged
 
 ### Step 3: Quick Data Extraction
 
@@ -90,12 +97,14 @@ description: A prompt template for generating sprint status reports for develope
 From your GitHub CLI JSON output:
 
 ```bash
-# Extract PR titles and Jira tickets
-
+# Extract PR titles and Jira tickets from merged PRs
 cat ./sprint-reports/prs_[SPRINT_PRS_FILE_NAME].json | jq -r '.[] | "• \(.title)"'
 
 # Extract unique Jira tickets
 cat ./sprint-reports/prs_[SPRINT_PRS_FILE_NAME].json | jq -r '.[] | .title' | grep -o 'SERV-[0-9]*' | sort -u
+
+# Get work in progress PRs (created during sprint, not yet merged)
+GH_PAGER=cat gh pr list --repo YAtechnologies/fs-epayment --state open --author kashif-yassir --json title,url,createdAt --jq '[.[] | select(.createdAt >= "[START_TIMESTAMP]" and .createdAt <= "[END_TIMESTAMP]")]'
 ```
 
 ### Step 4: Professional Tips
