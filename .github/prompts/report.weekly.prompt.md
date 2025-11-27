@@ -71,15 +71,33 @@ I am Muhammad Kashif, a Senior Full Stack Engineer at Yassir working on the Fina
      - `SHORT_DATE_FORMAT` is `<START_DD><END_DD><MM><YY>`; examples: `25021025` (25–02/10/2025), `19290925` (19–29/09/2025)
      - JSON schema: array of objects with fields: `createdAt`, `mergedAt`, `title`, `url`
    - **Fallback (if GitHub CLI command fails or is rate-limited):**
+
      - Use existing local JSON files under `weekly-reports/` named `prs_` + `SHORT_DATE_FORMAT` + `.json`
      - Selection rule: choose the file whose encoded range fully covers [StartDate, EndDate]; otherwise choose the closest overlapping range
      - Filter rule: include only PRs where `mergedAt` lies within [StartDate, EndDate]
      - Attach the selected file's contents to the agent context to proceed with report generation
 
+   - **Compute PR metrics for highlights:**
+     - Always compute metrics for merged PRs in the period for the Key Highlights section:
+       - Total merged PRs count
+       - Average merge time (from `createdAt` to `mergedAt`)
+       - Fastest merge time (from `createdAt` to `mergedAt`)
+
 4. **Search for next action items** based on expanded criteria:
    - JQL: `project = SERV AND (status = "To Do" OR status = "Open" OR status = "Blocked") AND (assignee = currentUser() OR assignee is empty) AND (labels = "EPayment-New-Arch" OR summary ~ "[EPayment New Arch]") AND updated >= "YYYY-MM-DD"`
 
 ### Step 2: Report Structure and Categorization
+
+#### Key Highlights Section:
+
+- Add a "Key Highlights" section at the very top of the report (just under the title) to provide a quick recap.
+- Include concise bullets summarizing:
+  - PRs merged: total count, average merge time, fastest merge time
+  - Jira status counts: In Progress, Done, Testing, Blocked
+  - Notable deliverables: up to 3 items (with Jira links)
+  - Notable PRs: up to 2 important PR titles (with links)
+  - Blockers: if any, list with Jira links
+  - Next action items count (from the Next Action Items section)
 
 #### Section Mapping by Jira Status:
 
@@ -94,13 +112,22 @@ I am Muhammad Kashif, a Senior Full Stack Engineer at Yassir working on the Fina
 - **When no merged PRs exist in the reporting period:**
   - Fetch open PRs created within the period
   - Extract Jira ticket numbers from PR titles using regex: `\(SERV-\d+\)`
-  - Add to "In Progress" section with format: `[PR Title] - [SERV-XXXX](Jira Link) - [PR Link](GitHub PR URL)`
+  - Add to "In Progress" section with format: PR Title - SERV-XXXX (Jira Link) - PR Link (GitHub PR URL)
   - If no Jira ticket found in PR title, list PR without ticket reference
 
 #### Report Format:
 
 ```markdown
 # Weekly Status Report - [StartDate] - [EndDate], [Current Year]
+
+## Key Highlights
+
+- PRs merged: [N]; Avg merge: [HHh MMm]; Fastest: [HHh MMm]
+- Status counts — In Progress: [N], Done: [N], Testing: [N], Blocked: [N]
+- Notable deliverables: [Title 1 - SERV-XXXX](https://yassir.atlassian.net/browse/SERV-XXXX); [Title 2 - SERV-YYYY](https://yassir.atlassian.net/browse/SERV-YYYY)
+- Notable PRs: [PR Title 1](https://github.com/YAtechnologies/fs-epayment/pull/XXX), [PR Title 2](https://github.com/YAtechnologies/fs-epayment/pull/YYY)
+- Blockers: [SERV-ZZZZ](https://yassir.atlassian.net/browse/SERV-ZZZZ) _(if any)_
+- Next actions: [N]
 
 ## In Progress:
 
@@ -160,12 +187,13 @@ I am Muhammad Kashif, a Senior Full Stack Engineer at Yassir working on the Fina
 - **If no merged PRs found in the period:**
   - Fetch and include open PRs in "In Progress" section
   - Extract Jira ticket numbers from PR titles using pattern `(SERV-XXXX)`
-  - Format as: `[PR Title] - [SERV-XXXX](Jira Link) - [PR Link](GitHub URL)`
-  - If PR title has no Jira ticket, format as: `[PR Title] - [PR Link](GitHub URL)`
+  - Format as: PR Title - SERV-XXXX (Jira Link) - PR Link (GitHub URL)
+  - If PR title has no Jira ticket, format as: PR Title - PR Link (GitHub URL)
 - When using the local PR JSON fallback:
   - Only include PRs whose `mergedAt` is within the reporting period
   - Compute average and fastest merge times from `createdAt` to `mergedAt` for PRs in the period
   - Sort PRs by `mergedAt` ascending for consistent output
+- Ensure the "Key Highlights" section reflects the computed metrics and counts from the sections below.
 
 ## Tools Required
 
