@@ -1,5 +1,12 @@
 # Weekly Status Report - November 20 - November 27, 2025
 
+## Key Highlights:
+
+5 PRs merged during this period
+3 items in progress (SERV-10015, SERV-9991, SERV-9990)
+1 item completed (SERV-10023)
+No blocked or next action items
+
 ## In Progress:
 
 - [EPayment New Arch] Add IsHybridIntegrated Flag to service config - [SERV-10015](https://yassir.atlassian.net/browse/SERV-10015)
@@ -36,3 +43,4 @@ _No next action items identified for this period._
 **Generated on:** November 27, 2025  
 **Repository:** [fs-epayment](https://github.com/YAtechnologies/fs-epayment)  
 **Jira Project:** [SERV - Financial Services](https://yassir.atlassian.net/browse/SERV)
+
