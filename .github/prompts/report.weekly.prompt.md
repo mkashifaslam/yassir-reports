@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description: A prompt to generate weekly status reports for developers.
 ---
 

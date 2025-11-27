@@ -1,0 +1,32 @@
+[
+  {
+    "createdAt": "2025-11-23T09:21:48Z",
+    "mergedAt": "2025-11-26T10:12:30Z",
+    "title": "feat(cors): add is_hybrid_integrated column to service_payment_method table (SERV-10015)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/914"
+  },
+  {
+    "createdAt": "2025-11-20T11:39:29Z",
+    "mergedAt": "2025-11-26T10:12:21Z",
+    "title": "feat(core): add platform filtering to payment methods retrieval (SERV-10023)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/913"
+  },
+  {
+    "createdAt": "2025-11-20T06:12:19Z",
+    "mergedAt": "2025-11-26T09:17:44Z",
+    "title": "refactor(search-feeder): remove unused PaymentEventHandler to streamline event handling (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/910"
+  },
+  {
+    "createdAt": "2025-11-18T09:30:19Z",
+    "mergedAt": "2025-11-26T08:54:39Z",
+    "title": "fix(mono): fix security issues (SERV-10006)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/905"
+  },
+  {
+    "createdAt": "2025-11-16T11:50:44Z",
+    "mergedAt": "2025-11-26T08:56:23Z",
+    "title": "feat(core): improve customer access token validation (SERV-9991)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/901"
+  }
+]
