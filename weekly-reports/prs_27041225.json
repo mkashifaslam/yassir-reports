@@ -1,0 +1,32 @@
+[
+  {
+    "createdAt": "2025-12-03T06:48:12Z",
+    "mergedAt": "2025-12-03T09:13:17Z",
+    "title": "refactor(core): list payment response update wallet response handling (SERV-9991)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/938"
+  },
+  {
+    "createdAt": "2025-11-30T09:32:45Z",
+    "mergedAt": "2025-12-01T05:13:02Z",
+    "title": "feat(core): update hybrid payment interceptor to require client token and enhance validation (SERV-9990)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/929"
+  },
+  {
+    "createdAt": "2025-11-27T08:16:05Z",
+    "mergedAt": "2025-11-27T13:24:49Z",
+    "title": "feat(apps): add debug prompt for environment variable validation errors (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/925"
+  },
+  {
+    "createdAt": "2025-11-26T11:41:43Z",
+    "mergedAt": "2025-11-27T11:02:37Z",
+    "title": "feat(core): add isHybridIntegrated flag to payment method service config (SERV-10015)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/920"
+  },
+  {
+    "createdAt": "2025-11-24T13:44:20Z",
+    "mergedAt": "2025-11-27T11:03:40Z",
+    "title": "refactor(core): implement customer access token strategy and enhance token resolution (SERV-9990)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/918"
+  }
+]
