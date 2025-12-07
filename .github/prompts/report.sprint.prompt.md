@@ -7,6 +7,15 @@ description: A prompt template for generating sprint status reports for develope
 
 # Sprint Review Status - [START_DATE] To [END_DATE]
 
+## Key Highlights
+
+- PRs merged: [N]; Avg merge: [HHh MMm]; Fastest: [HHh MMm]
+- Associated Jira tickets: [N] unique tickets
+- Deliverables completed: [N] items
+- Work in progress: [N] PRs under review
+- Sprint velocity: [N] points (if tracking story points)
+- Notable achievements: [1-2 key accomplishments]
+
 ## Sprint Review - Development Summary Report
 
 **Sprint Period:** [START_DATE] - [END_DATE], [YEAR]  
@@ -58,13 +67,52 @@ description: A prompt template for generating sprint status reports for develope
 
 ### Step 2: Fill Content Sections
 
-1. **Sprint Summary**: Write 2-3 sentences about overall sprint work
-2. **Sprint Deliverables**: List major tasks completed (bullet points)
-3. **Jira Stories**: Extract JIRA tickets from PR titles
-4. **Pull Requests**: Copy PR titles and URLs for merged PRs
-5. **Work in Progress**: List PRs created during sprint but not yet merged
+1. **Key Highlights**: Generate this first after data collection
+   - Count total merged PRs and calculate average/fastest merge times
+   - Count unique Jira tickets from PR titles
+   - Count deliverables from the Sprint Deliverables section
+   - Count open PRs from Work in Progress section
+   - Highlight 1-2 most impactful achievements
+2. **Sprint Summary**: Write 2-3 sentences about overall sprint work
+3. **Sprint Deliverables**: List major tasks completed (bullet points)
+4. **Jira Stories**: Extract JIRA tickets from PR titles
+5. **Pull Requests**: Copy PR titles and URLs for merged PRs
+6. **Work in Progress**: List PRs created during sprint but not yet merged
 
-### Step 3: Quick Data Extraction
+### Step 3: Data Collection
+
+1. **Gather Sprint PR Data:**
+
+   - Use the existing sprint PR JSON file with naming format: `prs_[START_DAY][END_DAY][MONTH][YEAR].json`
+   - If file does not exist, fetch using GitHub CLI:
+     ```bash
+     GH_PAGER=cat gh pr list --repo YAtechnologies/fs-epayment --state merged --author kashif-yassir --json title,url,mergedAt,createdAt --jq '[.[] | select(.mergedAt >= "[START_TIMESTAMP]" and .mergedAt <= "[END_TIMESTAMP]")]'
+     ```
+   - `START_TIMESTAMP` and `END_TIMESTAMP` format: `YYYY-MM-DDTHH:MM:SSZ`
+
+2. **Extract Jira Tickets:**
+
+   - Parse PR titles to extract Jira ticket numbers (format: `SERV-XXXX`)
+   - Create unique sorted list of Jira tickets
+   - Command:
+     ```bash
+     cat ./sprint-reports/prs_[SPRINT_PRS_FILE_NAME].json | jq -r '.[] | .title' | grep -o 'SERV-[0-9]*' | sort -u
+     ```
+
+3. **Compute PR Metrics:**
+
+   - **Total PR count:** Number of merged PRs in the sprint period
+   - **Average merge time:** Calculate average duration from `createdAt` to `mergedAt` for all merged PRs
+   - **Fastest merge time:** Find the shortest duration from `createdAt` to `mergedAt`
+   - Format times as: [HHh MMm] (e.g., "2h 30m")
+
+4. **Fetch Work in Progress PRs:**
+   - Open PRs created during the sprint period:
+     ```bash
+     GH_PAGER=cat gh pr list --repo YAtechnologies/fs-epayment --state open --author kashif-yassir --json title,url,createdAt --jq '[.[] | select(.createdAt >= "[START_TIMESTAMP]" and .createdAt <= "[END_TIMESTAMP]")]'
+     ```
+
+### Step 4: Quick Data Extraction
 
 ## How to Read Sprint PRs File
 
@@ -114,14 +162,36 @@ GH_PAGER=cat gh pr list --repo YAtechnologies/fs-epayment --state open --author 
 - Highlight business value and technical improvements
 - Use consistent formatting for all PRs
 - Include metrics when possible (e.g., "Fixed 3 critical bugs", "Improved performance by X%")
+- Key Highlights should provide a quick executive summary of sprint performance
 
-### Step 5: Save & Reuse
+### Step 5: Key Highlights Generation Guidelines
+
+The Key Highlights section provides an at-a-glance summary. Generate it using:
+
+- **PRs merged metric:** `[Total Count]; Avg merge: [HHh MMm]; Fastest: [HHh MMm]`
+- **Associated Jira tickets:** Count unique SERV-XXXX tickets from all PR titles
+- **Deliverables completed:** Count bullet points in Sprint Deliverables section
+- **Work in progress:** Count open PRs from Work in Progress section
+- **Sprint velocity:** Include if tracking story points (optional)
+- **Notable achievements:** Select 1-2 most impactful items from Sprint Deliverables
+
+Example:
+
+```
+- PRs merged: 11; Avg merge: 1h 15m; Fastest: 45m
+- Associated Jira tickets: 6 unique tickets
+- Deliverables completed: 10 items
+- Work in progress: 2 PRs under review
+- Notable achievements: Hybrid payment integration improvements, Security vulnerabilities resolved
+```
+
+### Step 6: Save & Reuse
 
 - Save this template in your notes/documents
 - Copy and customize for each sprint
 - Keep the same structure for consistency across sprints
 
-### Step 6: Save the completed report as a markdown file for easy sharing and archiving.
+### Step 7: Save the completed report as a markdown file for easy sharing and archiving.
 
 - saved as `sprint-status-report-[START_DATE]-to-[END_DATE].md`
 - saved at path: `./sprint-reports`
