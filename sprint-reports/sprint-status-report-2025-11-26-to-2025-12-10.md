@@ -6,7 +6,11 @@
 - Associated Jira tickets: 6 unique tickets
 - Deliverables completed: 10 items
 - Work in progress: 2 PRs under review
-- Notable achievements: Hybrid payment integration architecture enhancements, Comprehensive token validation strategies, Security vulnerability fixes
+- Notable achievements: 
+	- Improve authentication mechanism of payment methods listing and payment apis
+	- Add `IsHybridIntegrated` Flag to payment method service config
+	- Add platform filter of payment method listing api
+	- Security vulnerability fixes
 
 ## Sprint Review - Development Summary Report
 
