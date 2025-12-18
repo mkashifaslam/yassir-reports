@@ -1,0 +1,38 @@
+[
+  {
+    "createdAt": "2025-12-16T12:01:16Z",
+    "mergedAt": "2025-12-17T09:05:36Z",
+    "title": "refactor(hostapp): add required headers to payment api (SERV-10239)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/968"
+  },
+  {
+    "createdAt": "2025-12-15T10:09:09Z",
+    "mergedAt": "2025-12-16T09:55:53Z",
+    "title": "chore(hostapp): integrate HostAppConfig and Customer modules into payments module (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/966"
+  },
+  {
+    "createdAt": "2025-12-14T15:31:28Z",
+    "mergedAt": "2025-12-15T05:35:02Z",
+    "title": "feat(core): update logic to compute yassir cash hybrid payment status (SERV-10173)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/963"
+  },
+  {
+    "createdAt": "2025-12-14T14:58:34Z",
+    "mergedAt": "2025-12-15T06:53:19Z",
+    "title": "feat(core): return null balance of wallet when wallet service throw error (SERV-10222)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/962"
+  },
+  {
+    "createdAt": "2025-12-14T11:40:56Z",
+    "mergedAt": "2025-12-14T12:51:24Z",
+    "title": "test(hostapp): add unit tests for payment apis (SERV-10217)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/960"
+  },
+  {
+    "createdAt": "2025-12-10T13:08:10Z",
+    "mergedAt": "2025-12-11T07:51:08Z",
+    "title": "chore(core): map Dahabiya check payment status api remote unregister status code to internal status code (SERV-10192)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/956"
+  }
+]
