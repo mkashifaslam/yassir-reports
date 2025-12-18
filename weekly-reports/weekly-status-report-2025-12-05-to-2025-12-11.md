@@ -37,7 +37,8 @@ _No blocked items_
 
 ## Next Action Items:
 
-_No next action items at this time_
+- Need to discuss the dahabiya remote statuses -- Aliaa will share doc with all possible remote statuses of pssp for all pms.
+- we are planning to go with pm without add card option on prod for end to end testing.
 
 ---
 
