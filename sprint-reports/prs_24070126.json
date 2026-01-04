@@ -1,0 +1,14 @@
+[
+  {
+    "createdAt": "2025-12-29T07:46:27Z",
+    "mergedAt": "2025-12-29T10:19:04Z",
+    "title": "feat(core): integrate auto-refund API endpoint and update refund handling logic (SERV-9794)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/978"
+  },
+  {
+    "createdAt": "2025-12-25T10:12:35Z",
+    "mergedAt": "2025-12-25T15:21:11Z",
+    "title": "feat(core): integrate refund API with updated response structure (SERV-9761)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/977"
+  }
+]
