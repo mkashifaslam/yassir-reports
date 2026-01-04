@@ -47,3 +47,15 @@ _No next action items_
 **Generated on:** December 18, 2025  
 **Repository:** [fs-epayment](https://github.com/YAtechnologies/fs-epayment)  
 **Jira Project:** [SERV - Financial Services](https://yassir.atlassian.net/browse/SERV)
+
+---
+- Partial refund -  check old arch story for it and ask question from Yousra if any.
+- First pm should be default - list based on ranking
+- order id for all payment providers. (same actionId can have multiple order ids)
+- order id per transaction id - new arch
+- websdk - demo - review meeting present by Shabrina
+- transaction from old arch - 
+---
+- Tasks to list for it (register user to complete v2 for cashback)
+- it will use new arch on prod without any risk.
+- 
