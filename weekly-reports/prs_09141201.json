@@ -1,0 +1,20 @@
+[
+  {
+    "createdAt": "2026-01-14T06:58:22Z",
+    "mergedAt": "2026-01-14T09:20:57Z",
+    "title": "feat(core): add columns for partial refund support in payment method table (SERV-10373)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/986"
+  },
+  {
+    "createdAt": "2026-01-13T12:21:59Z",
+    "mergedAt": "2026-01-14T09:47:10Z",
+    "title": "chore(core): add new refund destination and payment method columns in refund table (SERV-10374)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/985"
+  },
+  {
+    "createdAt": "2026-01-06T15:05:09Z",
+    "mergedAt": "2026-01-14T10:33:35Z",
+    "title": "feat(core): add support of multiple partial refund (SERV-10337)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/981"
+  }
+]
