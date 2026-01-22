@@ -81,8 +81,32 @@ description: A prompt template for generating sprint status reports for develope
 
 ### Step 3: Data Collection
 
-1. **Gather Sprint PR Data:**
+0. **Get Sprint Dates & Info from Jira Board (SERV / Board 797)**
+   - Prefer fetching sprint metadata (name, startDate, endDate, goal) from Jira Agile API instead of manual input.
+   - Requirements: Set environment variables `ATLASSIAN_EMAIL` and `ATLASSIAN_API_TOKEN` (API token from Atlassian account). The board id is `797`.
+   - Commands:
 
+     ```bash
+     # Active sprint on Board 797
+     curl -s -u "$ATLASSIAN_EMAIL:$ATLASSIAN_API_TOKEN" \
+       "https://yassir.atlassian.net/rest/agile/1.0/board/797/sprint?state=active" \
+       | jq -r '.values[0] | {name, startDate, endDate, goal}'
+
+     # If no active sprint, fallback to the most recent sprint (e.g., last closed or the next planned)
+     curl -s -u "$ATLASSIAN_EMAIL:$ATLASSIAN_API_TOKEN" \
+       "https://yassir.atlassian.net/rest/agile/1.0/board/797/sprint?state=closed" \
+       | jq -r '.values | sort_by(.endDate) | last | {name, startDate, endDate, goal}'
+
+     # Optionally fetch sprint by name (e.g., "Payments 26.01")
+     # Note: filter client-side using jq
+     curl -s -u "$ATLASSIAN_EMAIL:$ATLASSIAN_API_TOKEN" \
+       "https://yassir.atlassian.net/rest/agile/1.0/board/797/sprint?state=active,closed,future" \
+       | jq -r '.values[] | select(.name | contains("Payments 26.01")) | {name, startDate, endDate, goal}'
+     ```
+
+   - Use `startDate` and `endDate` from the response to derive `[START_DATE]`, `[END_DATE]`, and timestamps (`YYYY-MM-DDTHH:MM:SSZ`) for PR queries below. Use the sprint `name` to populate the report header (e.g., "Payments 26.01").
+
+1. **Gather Sprint PR Data:**
    - Use the existing sprint PR JSON file with naming format: `prs_[START_DAY][END_DAY][MONTH][YEAR].json`
    - If file does not exist, fetch using GitHub CLI:
      ```bash
@@ -91,7 +115,6 @@ description: A prompt template for generating sprint status reports for develope
    - `START_TIMESTAMP` and `END_TIMESTAMP` format: `YYYY-MM-DDTHH:MM:SSZ`
 
 2. **Extract Jira Tickets:**
-
    - Parse PR titles to extract Jira ticket numbers (format: `SERV-XXXX`)
    - Create unique sorted list of Jira tickets
    - Command:
@@ -100,7 +123,6 @@ description: A prompt template for generating sprint status reports for develope
      ```
 
 3. **Compute PR Metrics:**
-
    - **Total PR count:** Number of merged PRs in the sprint period
    - **Average merge time:** Calculate average duration from `createdAt` to `mergedAt` for all merged PRs
    - **Fastest merge time:** Find the shortest duration from `createdAt` to `mergedAt`
