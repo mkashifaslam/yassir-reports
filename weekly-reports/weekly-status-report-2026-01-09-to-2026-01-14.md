@@ -32,11 +32,35 @@ _No testing items_
 
 ## Next Action Items:
 
-_No next action items_
-
+- getting error on multiple partial refund
+	- refund transaction showing full wallet amount instead of showing given amount to refund request
+- normal refund - 
+	-  This transaction was already refunded.
 ---
 
 **Report Period:** January 9 (Thursday) - January 14 (Tuesday)  
 **Generated on:** January 14, 2026  
 **Repository:** [fs-epayment](https://github.com/YAtechnologies/fs-epayment)  
 **Jira Project:** [SERV - Financial Services](https://yassir.atlassian.net/browse/SERV)
+
+--
+
+External integration with auth
+cashback - through new in olg
+payment flow with 
+
+---
+
+yassir cash be used with external clients.
+
+pin to use for wallet? - pin via sms, enter pin and fill the transaction, 
+yassir auth service, re-use pin
+
+- testing should be on staging
+- check with Shabrina on external cashback api tasks - highest priority
+- feb end deadline of yassir cash normal payment flow with shared auth service integration with pin,
+   it also include auth module of merchant, service registration and customer management and handling.
+	- check with Yousra how two auth (pin and customer access token work with this external system backend)
+	- usually pin used for each time want to perform a transaction.
+	- customer identification is required for transaction auth flow. (init, proceed, check, refund, reserve, capture, cancel etc.)
+	- check with Yousra, will it support all payment apis for normal payment.
