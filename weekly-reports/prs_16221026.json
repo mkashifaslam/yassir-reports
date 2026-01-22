@@ -1,0 +1,32 @@
+[
+  {
+    "createdAt": "2026-01-20T15:05:25Z",
+    "mergedAt": "2026-01-21T09:07:04Z",
+    "title": "test(core): remove redundant test for exceeding refund amount in hybrid transaction",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/998"
+  },
+  {
+    "createdAt": "2026-01-19T14:38:45Z",
+    "mergedAt": "2026-01-20T11:27:52Z",
+    "title": "feat(core): add support of always use original payment method to auto-refund (SERV-10383)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/996"
+  },
+  {
+    "createdAt": "2026-01-19T06:28:49Z",
+    "mergedAt": "2026-01-19T12:09:48Z",
+    "title": "chore(mono): add missing lodash types + add branch switcher script",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/995"
+  },
+  {
+    "createdAt": "2026-01-16T05:50:57Z",
+    "mergedAt": "2026-01-18T10:49:35Z",
+    "title": "chore(mono): add pino-pretty missing dev dependency to fix build process of services (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/992"
+  },
+  {
+    "createdAt": "2026-01-14T15:24:32Z",
+    "mergedAt": "2026-01-18T10:58:14Z",
+    "title": "feat(core): add support for specifying refund destination in refund API (SERV-10383)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/988"
+  }
+]
