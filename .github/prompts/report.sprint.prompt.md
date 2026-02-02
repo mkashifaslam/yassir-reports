@@ -109,6 +109,9 @@ description: A prompt template for generating sprint status reports for develope
 1. **Gather Sprint PR Data:**
    - Use the existing sprint PR JSON file with naming format: `prs_[START_DAY][END_DAY][MONTH][YEAR].json`
    - If file does not exist, fetch using GitHub CLI:
+   - **Check current GitHub user:** `gh auth status`
+     - **Switch to correct user if needed:** `gh auth switch` (select `kashif-yassir` if not active)
+   - **Fetch merged PRs for the sprint period:**
      ```bash
      GH_PAGER=cat gh pr list --repo YAtechnologies/fs-epayment --state merged --author kashif-yassir --json title,url,mergedAt,createdAt --jq '[.[] | select(.mergedAt >= "[START_TIMESTAMP]" and .mergedAt <= "[END_TIMESTAMP]")]'
      ```
