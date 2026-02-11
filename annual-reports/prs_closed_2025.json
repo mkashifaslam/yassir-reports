@@ -1,0 +1,534 @@
+[
+  {
+    "closedAt": "2025-12-29T10:19:04Z",
+    "createdAt": "2025-12-29T07:46:27Z",
+    "number": 978,
+    "title": "feat(core): integrate auto-refund API endpoint and update refund handling logic (SERV-9794)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/978"
+  },
+  {
+    "closedAt": "2025-12-25T15:21:11Z",
+    "createdAt": "2025-12-25T10:12:35Z",
+    "number": 977,
+    "title": "feat(core): integrate refund API with updated response structure (SERV-9761)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/977"
+  },
+  {
+    "closedAt": "2025-12-22T10:23:37Z",
+    "createdAt": "2025-12-22T07:32:37Z",
+    "number": 975,
+    "title": "refactor(wallet-backend): enhance pre-auth request handling and add OrderPreAuthResponse type (SERV-10272)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/975"
+  },
+  {
+    "closedAt": "2025-12-18T13:17:29Z",
+    "createdAt": "2025-12-17T14:25:20Z",
+    "number": 972,
+    "title": "feat(hostapp): add reserve, capture, release, and refund endpoints (SERV-10243)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/972"
+  },
+  {
+    "closedAt": "2025-12-17T09:05:36Z",
+    "createdAt": "2025-12-16T12:01:16Z",
+    "number": 968,
+    "title": "refactor(hostapp): add required headers to payment api (SERV-10239)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/968"
+  },
+  {
+    "closedAt": "2025-12-16T09:55:53Z",
+    "createdAt": "2025-12-15T10:09:09Z",
+    "number": 966,
+    "title": "chore(hostapp): integrate HostAppConfig and Customer modules into payments module (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/966"
+  },
+  {
+    "closedAt": "2025-12-15T05:35:02Z",
+    "createdAt": "2025-12-14T15:31:28Z",
+    "number": 963,
+    "title": "feat(core): update logic to compute yassir cash hybrid payment status (SERV-10173)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/963"
+  },
+  {
+    "closedAt": "2025-12-15T06:53:19Z",
+    "createdAt": "2025-12-14T14:58:34Z",
+    "number": 962,
+    "title": "feat(core): return null balance of wallet when wallet service throw error (SERV-10222)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/962"
+  },
+  {
+    "closedAt": "2025-12-14T12:51:24Z",
+    "createdAt": "2025-12-14T11:40:56Z",
+    "number": 960,
+    "title": "test(hostapp): add unit tests for payment apis (SERV-10217)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/960"
+  },
+  {
+    "closedAt": "2025-12-14T14:27:29Z",
+    "createdAt": "2025-12-11T13:34:36Z",
+    "number": 957,
+    "title": "chore(core): update provider status mapping for check payment to handle unregister status code (SERV-10192)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/957"
+  },
+  {
+    "closedAt": "2025-12-11T07:51:08Z",
+    "createdAt": "2025-12-10T13:08:10Z",
+    "number": 956,
+    "title": "chore(core): map Dahabiya check payment status api remote unregister status code to internal status code (SERV-10192)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/956"
+  },
+  {
+    "closedAt": "2025-12-10T08:06:46Z",
+    "createdAt": "2025-12-09T11:14:32Z",
+    "number": 954,
+    "title": "chore(core): improve wallet deactivation logic for payment methods (SERV-10173)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/954"
+  },
+  {
+    "closedAt": "2025-12-09T09:14:32Z",
+    "createdAt": "2025-12-09T08:33:50Z",
+    "number": 953,
+    "title": "feat(core): add amount parameter to payment methods and update wallet status logic (SERV-10173)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/953"
+  },
+  {
+    "closedAt": "2025-12-08T11:32:43Z",
+    "createdAt": "2025-12-08T09:30:36Z",
+    "number": 952,
+    "title": "refactor(core): update access token generation to use service decorator (SERV-9990)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/952"
+  },
+  {
+    "closedAt": "2025-12-08T09:23:42Z",
+    "createdAt": "2025-12-07T15:22:00Z",
+    "number": 951,
+    "title": "docs(apis): add new endpoints for retrieving and updating payment methods",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/951"
+  },
+  {
+    "closedAt": "2025-12-07T12:32:32Z",
+    "createdAt": "2025-12-07T10:18:46Z",
+    "number": 948,
+    "title": "feat(core): implement user authentication through interceptor for payment methods (SERV-9990)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/948"
+  },
+  {
+    "closedAt": "2025-12-07T11:39:07Z",
+    "createdAt": "2025-12-04T15:24:06Z",
+    "number": 946,
+    "title": "refactor(core): apply client credentials validation on payment apis (SERV-9991)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/946"
+  },
+  {
+    "closedAt": "2025-12-04T09:55:20Z",
+    "createdAt": "2025-12-03T15:21:29Z",
+    "number": 942,
+    "title": "refactor(core): implement user phone validation in payment flow (SERV-9991)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/942"
+  },
+  {
+    "closedAt": "2025-12-03T09:13:17Z",
+    "createdAt": "2025-12-03T06:48:12Z",
+    "number": 938,
+    "title": "refactor(core): list payment response update wallet response handling (SERV-9991)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/938"
+  },
+  {
+    "closedAt": "2025-12-01T05:13:02Z",
+    "createdAt": "2025-11-30T09:32:45Z",
+    "number": 929,
+    "title": "feat(core): update hybrid payment interceptor to require client token and enhance validation (SERV-9990)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/929"
+  },
+  {
+    "closedAt": "2025-11-27T13:24:49Z",
+    "createdAt": "2025-11-27T08:16:05Z",
+    "number": 925,
+    "title": "feat(apps): add debug prompt for environment variable validation errors (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/925"
+  },
+  {
+    "closedAt": "2025-11-27T11:02:37Z",
+    "createdAt": "2025-11-26T11:41:43Z",
+    "number": 920,
+    "title": "feat(core): add isHybridIntegrated flag to payment method service config (SERV-10015)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/920"
+  },
+  {
+    "closedAt": "2025-11-27T11:03:40Z",
+    "createdAt": "2025-11-24T13:44:20Z",
+    "number": 918,
+    "title": "refactor(core): implement customer access token strategy and enhance token resolution (SERV-9990)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/918"
+  },
+  {
+    "closedAt": "2025-11-26T10:12:30Z",
+    "createdAt": "2025-11-23T09:21:48Z",
+    "number": 914,
+    "title": "feat(cors): add is_hybrid_integrated column to service_payment_method table (SERV-10015)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/914"
+  },
+  {
+    "closedAt": "2025-11-26T10:12:21Z",
+    "createdAt": "2025-11-20T11:39:29Z",
+    "number": 913,
+    "title": "feat(core): add platform filtering to payment methods retrieval (SERV-10023)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/913"
+  },
+  {
+    "closedAt": "2025-11-26T09:17:45Z",
+    "createdAt": "2025-11-20T06:12:19Z",
+    "number": 910,
+    "title": "refactor(search-feeder): remove unused PaymentEventHandler to streamline event handling (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/910"
+  },
+  {
+    "closedAt": "2025-11-26T08:54:39Z",
+    "createdAt": "2025-11-18T09:30:19Z",
+    "number": 905,
+    "title": "fix(mono): fix security issues (SERV-10006)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/905"
+  },
+  {
+    "closedAt": "2025-11-26T08:56:23Z",
+    "createdAt": "2025-11-16T11:50:44Z",
+    "number": 901,
+    "title": "feat(core): improve customer access token validation (SERV-9991)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/901"
+  },
+  {
+    "closedAt": "2025-12-25T10:13:55Z",
+    "createdAt": "2025-10-20T05:36:30Z",
+    "number": 867,
+    "title": "feat(core): integrate refund payment response handling of SATIM (SERV-9761)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/867"
+  },
+  {
+    "closedAt": "2025-12-29T08:03:56Z",
+    "createdAt": "2025-10-19T13:32:57Z",
+    "number": 863,
+    "title": "feat(core): implement auto refund functionality (SERV-9794)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/863"
+  },
+  {
+    "closedAt": "2025-10-13T06:21:01Z",
+    "createdAt": "2025-10-12T08:05:22Z",
+    "number": 856,
+    "title": "feat(core): update payout method API requests and add new payout method fields",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/856"
+  },
+  {
+    "closedAt": "2025-10-09T06:31:30Z",
+    "createdAt": "2025-10-08T05:57:38Z",
+    "number": 854,
+    "title": "test(core): enhance payout module code coverage (SERV-9637)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/854"
+  },
+  {
+    "closedAt": "2025-10-08T06:31:07Z",
+    "createdAt": "2025-10-07T12:10:51Z",
+    "number": 853,
+    "title": "test(core): add unit tests for payout transaction and provider activation services / repositories (SERV-9667)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/853"
+  },
+  {
+    "closedAt": "2025-10-07T07:00:43Z",
+    "createdAt": "2025-10-05T07:30:16Z",
+    "number": 851,
+    "title": "feat(core): add payout transaction crud apis (SERV-9637)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/851"
+  },
+  {
+    "closedAt": "2025-10-05T09:54:15Z",
+    "createdAt": "2025-10-02T09:24:35Z",
+    "number": 850,
+    "title": "feat(core): add admin guard to payout provider activation and payment method endpoints (SERV-9611)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/850"
+  },
+  {
+    "closedAt": "2025-10-02T07:25:00Z",
+    "createdAt": "2025-10-01T14:05:43Z",
+    "number": 847,
+    "title": "feat(core): add provider activation functionality and related entities (SERV-9611)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/847"
+  },
+  {
+    "closedAt": "2025-10-01T08:49:37Z",
+    "createdAt": "2025-09-30T12:45:16Z",
+    "number": 846,
+    "title": "feat(core): refactor payout payment methods to admin namespace and add pagination support (SERV-9558)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/846"
+  },
+  {
+    "closedAt": "2025-09-30T12:16:38Z",
+    "createdAt": "2025-09-30T11:05:08Z",
+    "number": 844,
+    "title": "test(core): add unit tests for controller, service, repository of payout module (SERV-9558)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/844"
+  },
+  {
+    "closedAt": "2025-09-30T10:39:46Z",
+    "createdAt": "2025-09-30T08:08:32Z",
+    "number": 842,
+    "title": "feat(core): improved error handling of payout payment methods and modify example data (SERV-9558)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/842"
+  },
+  {
+    "closedAt": "2025-09-29T15:10:30Z",
+    "createdAt": "2025-09-29T12:37:24Z",
+    "number": 840,
+    "title": "docs(core): update payout-module docs (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/840"
+  },
+  {
+    "closedAt": "2025-09-29T12:39:27Z",
+    "createdAt": "2025-09-29T07:22:04Z",
+    "number": 838,
+    "title": "feat(core): implement payout module with controller, service, and DTOs (SERV-9558)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/838"
+  },
+  {
+    "closedAt": "2025-09-29T10:31:42Z",
+    "createdAt": "2025-09-28T10:04:23Z",
+    "number": 836,
+    "title": "docs(core): add comprehensive documentation for payout module implementation (SERV-9570)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/836"
+  },
+  {
+    "closedAt": "2025-09-24T13:33:13Z",
+    "createdAt": "2025-09-24T10:21:48Z",
+    "number": 829,
+    "title": "test(core): add unit tests for AccessTokenManagerService and ClientCredentialsService",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/829"
+  },
+  {
+    "closedAt": "2025-09-30T07:03:38Z",
+    "createdAt": "2025-09-24T07:22:06Z",
+    "number": 828,
+    "title": "test(core): enhance CustomerAccessTokenService tests with token management scenarios",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/828"
+  },
+  {
+    "closedAt": "2025-09-23T13:48:14Z",
+    "createdAt": "2025-09-23T12:51:38Z",
+    "number": 825,
+    "title": "refactor(core): improve error handling in payment services and update test assertions",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/825"
+  },
+  {
+    "closedAt": "2025-09-22T10:08:01Z",
+    "createdAt": "2025-09-22T06:24:23Z",
+    "number": 823,
+    "title": "test(core): enhance PaymentController tests with additional methods and scenarios (SERV-9448)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/823"
+  },
+  {
+    "closedAt": "2025-09-21T10:40:30Z",
+    "createdAt": "2025-09-21T07:10:00Z",
+    "number": 821,
+    "title": "test(core): add unit tests for TransactionRepository methods (SERV-9448)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/821"
+  },
+  {
+    "closedAt": "2025-09-18T07:54:59Z",
+    "createdAt": "2025-09-17T15:35:14Z",
+    "number": 819,
+    "title": "refactor(core): enhance refund handling for hybrid payments and improve validation (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/819"
+  },
+  {
+    "closedAt": "2025-09-14T14:07:08Z",
+    "createdAt": "2025-09-14T09:51:14Z",
+    "number": 812,
+    "title": "docs(mono): add copilot instructions",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/812"
+  },
+  {
+    "closedAt": "2025-09-14T10:04:34Z",
+    "createdAt": "2025-09-14T07:16:31Z",
+    "number": 811,
+    "title": "fix(apis): add X-Country-Code header to authentication and wallet requests (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/811"
+  },
+  {
+    "closedAt": "2025-09-14T10:02:50Z",
+    "createdAt": "2025-09-14T07:09:11Z",
+    "number": 810,
+    "title": "refactor(core): reorganize and refactor imports (SERV-9432)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/810"
+  },
+  {
+    "closedAt": "2025-09-15T10:28:35Z",
+    "createdAt": "2025-09-11T12:59:14Z",
+    "number": 802,
+    "title": "fix(core): update payment amount handling in capture endpoint (SERV-9458)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/802"
+  },
+  {
+    "closedAt": "2025-09-15T10:42:28Z",
+    "createdAt": "2025-09-11T12:37:45Z",
+    "number": 801,
+    "title": "feat(core): update hybrid payment refund status handling (SERV-9294)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/801"
+  },
+  {
+    "closedAt": "2025-09-10T14:31:30Z",
+    "createdAt": "2025-09-10T12:51:19Z",
+    "number": 797,
+    "title": "feat(core): enhance hybrid payment processing with secondary payment method support (SERV-9294)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/797"
+  },
+  {
+    "closedAt": "2025-09-09T13:02:32Z",
+    "createdAt": "2025-09-09T10:10:20Z",
+    "number": 792,
+    "title": "test(core): enhance refund handling tests for hybrid and normal payment scenarios (SERV-9448)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/792"
+  },
+  {
+    "closedAt": "2025-09-09T09:28:04Z",
+    "createdAt": "2025-09-08T15:50:12Z",
+    "number": 791,
+    "title": "test(core): add error handling for transaction creation and saving \u0026 add tests of payment service methods (SERV-9448)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/791"
+  },
+  {
+    "closedAt": "2025-09-08T10:01:04Z",
+    "createdAt": "2025-09-07T15:47:04Z",
+    "number": 788,
+    "title": "test(core): improve service config retrieval and add error handling",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/788"
+  },
+  {
+    "closedAt": "2025-09-07T09:49:52Z",
+    "createdAt": "2025-09-07T08:06:34Z",
+    "number": 787,
+    "title": "fix(apis): fix wallet order amount decimal issue (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/787"
+  },
+  {
+    "closedAt": "2025-09-04T13:02:49Z",
+    "createdAt": "2025-09-04T11:19:13Z",
+    "number": 784,
+    "title": "fix(core): improve error handling for wallet balance retrieval (SERV-9296)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/784"
+  },
+  {
+    "closedAt": "2025-09-02T14:22:45Z",
+    "createdAt": "2025-09-02T13:09:37Z",
+    "number": 780,
+    "title": "chore(core): update proceed payment headers to include country code (SERV-9296)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/780"
+  },
+  {
+    "closedAt": "2025-09-02T10:04:28Z",
+    "createdAt": "2025-09-02T08:46:09Z",
+    "number": 775,
+    "title": "feature(api): add user authentication and wallet management endpoints (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/775"
+  },
+  {
+    "closedAt": "2025-09-02T08:39:40Z",
+    "createdAt": "2025-09-01T14:42:39Z",
+    "number": 774,
+    "title": "feat(core): support multi-currency of user wallet balance check (SERV-9296)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/774"
+  },
+  {
+    "closedAt": "2025-08-28T07:40:49Z",
+    "createdAt": "2025-08-27T10:48:28Z",
+    "number": 764,
+    "title": "fix(search-feeder): streamline transaction update process and add test search api (SERV-9373)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/764"
+  },
+  {
+    "closedAt": "2025-08-26T09:38:23Z",
+    "createdAt": "2025-08-26T07:18:47Z",
+    "number": 760,
+    "title": "feat(core): handle refunds for cash payments in hybrid payment (SERV-9373)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/760"
+  },
+  {
+    "closedAt": "2025-08-26T09:14:33Z",
+    "createdAt": "2025-08-25T13:34:35Z",
+    "number": 759,
+    "title": "test(apis): add HTTP requests for testing with HTTP client (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/759"
+  },
+  {
+    "closedAt": "2025-08-24T14:43:17Z",
+    "createdAt": "2025-08-24T10:10:51Z",
+    "number": 755,
+    "title": "feat(core): enhance payment cancellation logic for hybrid cash payments (SERV-9343)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/755"
+  },
+  {
+    "closedAt": "2025-08-24T14:38:39Z",
+    "createdAt": "2025-08-21T12:02:17Z",
+    "number": 754,
+    "title": "feat(core): handle capture payment endpoint hybrid payment with cash payment method (SERV-9342)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/754"
+  },
+  {
+    "closedAt": "2025-08-20T09:31:39Z",
+    "createdAt": "2025-08-20T07:38:59Z",
+    "number": 751,
+    "title": "feat(core): handle check payment endpoint hybrid payment with cash payment method (SERV-9294)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/751"
+  },
+  {
+    "closedAt": "2025-08-20T07:32:22Z",
+    "createdAt": "2025-08-19T14:51:01Z",
+    "number": 749,
+    "title": "feat(core): hybrid payment with cash payment method (SERV-9294)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/749"
+  },
+  {
+    "closedAt": "2025-08-13T13:11:31Z",
+    "createdAt": "2025-08-13T09:56:12Z",
+    "number": 737,
+    "title": "feat(core): hybrid payment configuration handling (SERV-9220)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/737"
+  },
+  {
+    "closedAt": "2025-08-12T09:42:13Z",
+    "createdAt": "2025-08-11T15:25:18Z",
+    "number": 729,
+    "title": "feat(core): add a hybrid payment config fields to a payment methods list (SERV-9220)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/729"
+  },
+  {
+    "closedAt": "2025-08-11T12:47:14Z",
+    "createdAt": "2025-08-11T09:22:26Z",
+    "number": 727,
+    "title": "feat(core): add hybrid payment combination field to service payment method entity (SERV-9220)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/727"
+  },
+  {
+    "closedAt": "2025-08-10T14:40:43Z",
+    "createdAt": "2025-08-10T10:10:22Z",
+    "number": 723,
+    "title": "chore(core): add SATIM payment method seeding data (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/723"
+  },
+  {
+    "closedAt": "2025-08-07T10:49:01Z",
+    "createdAt": "2025-08-07T10:36:55Z",
+    "number": 720,
+    "title": "test(dashboard-backend): add unit tests of transaction search endpoint (SERV-9222)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/720"
+  },
+  {
+    "closedAt": "2025-08-07T10:23:40Z",
+    "createdAt": "2025-08-06T15:32:03Z",
+    "number": 717,
+    "title": "refactor(search-feeder): refactor seeders and event handlers",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/717"
+  },
+  {
+    "closedAt": "2025-08-06T10:05:21Z",
+    "createdAt": "2025-08-05T06:12:41Z",
+    "number": 710,
+    "title": "chore(core): add new seeder script to seed database tables (SERV-0000)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/710"
+  }
+]
