@@ -1,0 +1,12 @@
+[
+  {
+    "createdAt": "2026-02-16T06:04:50Z",
+    "title": "test(core): add unit tests for Refund Helpers (SERV-10699)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1066"
+  },
+  {
+    "createdAt": "2026-02-15T14:16:54Z",
+    "title": "feat(core): set default refund destination to original if not specified in normal refund flow (SERV-10375)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1064"
+  }
+]
