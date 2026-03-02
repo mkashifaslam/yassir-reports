@@ -1,0 +1,56 @@
+[
+  {
+    "createdAt": "2026-02-25T08:59:13Z",
+    "mergedAt": "2026-02-25T09:12:51Z",
+    "title": "docs(core): add comprehensive documentation for the Refund module implementation",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1130"
+  },
+  {
+    "createdAt": "2026-02-25T06:57:11Z",
+    "mergedAt": "2026-02-25T08:50:12Z",
+    "title": "refactor(core): reorganize refund folder structure and update import paths",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1125"
+  },
+  {
+    "createdAt": "2026-02-24T12:22:12Z",
+    "mergedAt": "2026-02-24T13:41:33Z",
+    "title": "refactor(core): update country code validation to ISO 3166-1 alpha-3 and adjust refund payment parameters (SERV-10745)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1116"
+  },
+  {
+    "createdAt": "2026-02-24T07:02:01Z",
+    "mergedAt": "2026-02-24T10:44:42Z",
+    "title": "refactor(core): update payment method handling to use PaymentHeaderDTO and remove countryCode from ListPaymentMethodDto (SERV-10745",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1115"
+  },
+  {
+    "createdAt": "2026-02-23T15:55:27Z",
+    "mergedAt": "2026-02-24T08:48:53Z",
+    "title": "feat(core): add ISO alpha-2 country code mapping and conversion helpers (SERV-10745)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1114"
+  },
+  {
+    "createdAt": "2026-02-23T05:27:38Z",
+    "mergedAt": "2026-02-23T12:31:58Z",
+    "title": "feat(core): enhance hybrid payment refund handling with explicit wallet support and partial refund validation (SERV-10700)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1108"
+  },
+  {
+    "createdAt": "2026-02-18T11:15:40Z",
+    "mergedAt": "2026-02-18T15:37:33Z",
+    "title": "feat(core): enhance refund validation of hybrid payment to handle auto-refund scenarios (SERV-10700)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1097"
+  },
+  {
+    "createdAt": "2026-02-18T09:07:43Z",
+    "mergedAt": "2026-02-18T11:02:04Z",
+    "title": "feat(core): add auto refundable config param to payment method (SERV-10700)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1094"
+  },
+  {
+    "createdAt": "2026-02-17T12:22:50Z",
+    "mergedAt": "2026-02-18T08:50:44Z",
+    "title": "refactor(core): create refund module and refactor payment imports",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1086"
+  }
+]

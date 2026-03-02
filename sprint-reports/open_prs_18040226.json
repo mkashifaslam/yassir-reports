@@ -1,0 +1,12 @@
+[
+  {
+    "createdAt": "2026-03-01T15:37:49Z",
+    "title": "fix(core): enhance refund logic to support auto refund fallback scenarios (SERV-10806)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1141"
+  },
+  {
+    "createdAt": "2026-03-01T10:45:10Z",
+    "title": "refactor(apps): improve error handling in wallet services",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1140"
+  }
+]
