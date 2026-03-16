@@ -1,0 +1,7 @@
+[
+  {
+    "createdAt": "2026-03-16T06:54:51Z",
+    "title": "refactor(core): implement access token and token manager interfaces (SERV-10929)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1164"
+  }
+]

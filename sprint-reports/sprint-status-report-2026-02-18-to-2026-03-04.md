@@ -56,3 +56,27 @@ This sprint focused heavily on refund architecture improvements and country code
 • [refactor(apps): improve error handling in wallet services - Status: Under Review](https://github.com/YAtechnologies/fs-epayment/pull/1140)
 
 ---
+
+- **Refactored and Consolidated Refund Logic**  
+    Centralized all refund-related business logic into a dedicated, reusable module to improve maintainability, consistency, and scalability.
+    
+- **Developed Comprehensive Refund Module Documentation**  
+    Produced detailed technical documentation covering architecture, workflows, configuration options, and integration guidelines to support cross-team collaboration and future enhancements.
+    
+- **Standardized Country Code Handling Across Payment APIs**  
+    Unified country code implementation across all payment APIs to ensure consistency, reduce validation issues, and eliminate data mismatches.
+    
+- **Implemented Configurable Auto-Refund Support for Payment Methods**  
+    Introduced flexible auto-refund configuration capabilities, enabling payment methods to define and control refund behavior dynamically.
+    
+- **Enhanced Hybrid Payment Auto-Refund Flow**  
+    Extended the hybrid payment auto-refund logic to support both explicit and fallback scenarios, improving system robustness and edge-case handling.
+
+---
+
+- Refactored and Consolidated Refund Logic
+- Developed Comprehensive Refund Module Documentation  
+- Standardized Country Code Handling Across Payment APIs  
+- Implemented Configurable Auto-Refund Support for Payment Methods
+- Enhanced Hybrid Payment Auto-Refund Flow
+---

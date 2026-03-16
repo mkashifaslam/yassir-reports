@@ -1,0 +1,32 @@
+[
+  {
+    "createdAt": "2026-03-12T07:44:48Z",
+    "mergedAt": "2026-03-12T11:39:27Z",
+    "title": "feat(libs): standardize JWT tokens payload structure with helper functions (SERV-10744)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1161"
+  },
+  {
+    "createdAt": "2026-03-09T06:12:17Z",
+    "mergedAt": "2026-03-09T11:12:59Z",
+    "title": "refactor(core): refactor full refund handling for hybrid wallet transaction into separate service (SERV-10874)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1154"
+  },
+  {
+    "createdAt": "2026-03-08T11:13:00Z",
+    "mergedAt": "2026-03-08T14:33:41Z",
+    "title": "feat(core): implement full refund handling for wallet transactions in hybrid payment flow",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1153"
+  },
+  {
+    "createdAt": "2026-03-05T07:59:44Z",
+    "mergedAt": "2026-03-08T13:52:15Z",
+    "title": "fix(search-feeder): SERV-10855 support concurrency and version conflicts in trans update",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1152"
+  },
+  {
+    "createdAt": "2026-03-04T16:25:21Z",
+    "mergedAt": "2026-03-11T07:51:01Z",
+    "title": "feat(core): implement JWT token generation and verification service (SERV-10746)",
+    "url": "https://github.com/YAtechnologies/fs-epayment/pull/1148"
+  }
+]
